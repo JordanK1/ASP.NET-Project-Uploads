@@ -1,0 +1,5 @@
+C:\Users\Jordan\source\repos NET\DailyBlogger [ASP.NET Sec.2 Project]\DailyBlogger [ASP.NET Sec.2 Project]\obj\Debug\netcoreapp2.1\DailyBlogger [ASP.NET Sec.2 Project].AssemblyInfoInputs.cache
+C:\Users\Jordan\source\repos NET\DailyBlogger [ASP.NET Sec.2 Project]\DailyBlogger [ASP.NET Sec.2 Project]\obj\Debug\netcoreapp2.1\DailyBlogger [ASP.NET Sec.2 Project].AssemblyInfo.cs
+C:\Users\Jordan\source\repos NET\DailyBlogger [ASP.NET Sec.2 Project]\DailyBlogger [ASP.NET Sec.2 Project]\obj\Debug\netcoreapp2.1\DailyBlogger [ASP.NET Sec.2 Project].csproj.CoreCompileInputs.cache
+C:\Users\Jordan\source\repos NET\DailyBlogger [ASP.NET Sec.2 Project]\DailyBlogger [ASP.NET Sec.2 Project]\obj\Debug\netcoreapp2.1\DailyBlogger [ASP.NET Sec.2 Project].RazorAssemblyInfo.cache
+C:\Users\Jordan\source\repos NET\DailyBlogger [ASP.NET Sec.2 Project]\DailyBlogger [ASP.NET Sec.2 Project]\obj\Debug\netcoreapp2.1\DailyBlogger [ASP.NET Sec.2 Project].RazorAssemblyInfo.cs

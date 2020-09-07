@@ -1,0 +1,64 @@
+﻿<!--Razor Syntax Examples-->
+@{
+    ViewData["Title"] = "Home Page";
+    string myText = "This is a C# string";
+    string[] myArray = { "A", "B", "C", "D", "E", "F", "G" };
+    int[] array2 = { 1, 2, 3, 4, 5, 6, 7 };
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>@myText</p>
+</div>
+
+<!--Unordered List w/ Razor Syntax-->
+    <ul>
+        @foreach(string item in myArray)
+        {
+            <li>@item</li>
+        }
+    </ul>
+
+<!--Table w/ Razor Syntax-->
+<table>
+    @foreach(int column in array2)
+    {
+        <tr>
+            <td style="border: 1px solid black", width="20px">@column</td>
+            @foreach(string row in myArray)
+            {
+                <td style="border: 1px solid black", width="20px">
+                    @if (column == 1) { @row}
+                    else
+                    {
+
+                    }
+                </td>
+            }
+        </tr>
+    }
+</table>
+
+<!--HTML Helper example-->
+<div>
+    @Html.Label("Textbox1", "Label Text")
+    @Html.TextBox("Textbox1") 
+</div>
+
+
+<!--Razor Syntax Random string example-->
+    <p>
+
+        @{ 
+            byte[] data = new byte[500];
+            for (int i = 0; i < data.Length; i++)
+            {
+                Random rand = new Random();
+
+                rand.NextBytes(data);
+                Char c = (char)data[i];
+                @Html.DisplayFor(x => c)
+            }
+        }
+    </p>
