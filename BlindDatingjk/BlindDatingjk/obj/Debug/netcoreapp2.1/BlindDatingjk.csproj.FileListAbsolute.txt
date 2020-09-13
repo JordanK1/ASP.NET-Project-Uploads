@@ -46,3 +46,5 @@ C:\Users\Jordan\source\repos_NET\BlindDatingjk\BlindDatingjk\obj\Debug\netcoreap
 C:\Users\Jordan\source\repos_NET\BlindDatingjk\BlindDatingjk\obj\Debug\netcoreapp2.1\Razor\Views\DatingProfiles\Index.cshtml.g.cs
 C:\Users\Jordan\source\repos_NET\BlindDatingjk\BlindDatingjk\obj\Debug\netcoreapp2.1\Razor\Views\RegisterAccount\SignUp.cshtml.g.cs
 C:\Users\Jordan\source\repos_NET\BlindDatingjk\BlindDatingjk\obj\Debug\netcoreapp2.1\Razor\Views\DatingProfiles\ProfileInfo.cshtml.g.cs
+C:\Users\Jordan\source\repos_NET\BlindDatingjk\BlindDatingjk\obj\Debug\netcoreapp2.1\Razor\Views\DatingProfiles\Browse.cshtml.g.cs
+C:\Users\Jordan\source\repos_NET\BlindDatingjk\BlindDatingjk\obj\Debug\netcoreapp2.1\Razor\Views\DatingProfiles\Show.cshtml.g.cs

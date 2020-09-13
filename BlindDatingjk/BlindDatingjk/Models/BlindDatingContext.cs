@@ -31,8 +31,6 @@ namespace BlindDatingjk.Models
         {
             modelBuilder.Entity<DatingProfile>(entity =>
             {
-                entity.ToTable("dating_profile");
-
                 entity.Property(e => e.Id)
                     .HasColumnName("ID")
                     .ValueGeneratedNever();
@@ -40,26 +38,31 @@ namespace BlindDatingjk.Models
                 entity.Property(e => e.Age).HasColumnName("age");
 
                 entity.Property(e => e.Bio)
+                    .IsRequired()
                     .HasColumnName("bio")
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
                 entity.Property(e => e.FirstName)
+                    .IsRequired()
                     .HasColumnName("first_name")
                     .HasMaxLength(25)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Gender)
+                    .IsRequired()
                     .HasColumnName("gender")
                     .HasMaxLength(1)
                     .IsUnicode(false);
 
                 entity.Property(e => e.LastName)
+                    .IsRequired()
                     .HasColumnName("last_name")
                     .HasMaxLength(25)
                     .IsUnicode(false);
 
                 entity.Property(e => e.UserAccountId)
+                    .IsRequired()
                     .HasColumnName("user_account_id")
                     .HasMaxLength(30)
                     .IsUnicode(false);

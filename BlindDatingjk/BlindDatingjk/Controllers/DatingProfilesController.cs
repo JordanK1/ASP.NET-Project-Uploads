@@ -16,28 +16,28 @@ namespace BlindDatingjk.Controllers
         private readonly BlindDatingContext _context;
         private UserManager<IdentityUser> _userManager;
 
-        public DatingProfilesController(BlindDatingContext context)
+        public DatingProfilesController(BlindDatingContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: DatingProfiles
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.DatingProfile.ToListAsync());
         }
 
         // GET: DatingProfiles
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> Browse()
         {
             return View(await _context.DatingProfile.ToListAsync());
         }
 
-
         // GET: DatingProfiles/Details/5
-        //[Athorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -55,7 +55,7 @@ namespace BlindDatingjk.Controllers
             return View(datingProfile);
         }
 
-        //[Authorize]
+        [Authorize]
         public async Task<IActionResult> Show(int? id)
         {
             if (id == null)
@@ -74,12 +74,13 @@ namespace BlindDatingjk.Controllers
         }
 
         // GET: DatingProfiles/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
         }
 
-        //[Authorize]
+        [Authorize]
         public IActionResult ProfileInfo()
         {
             string userID = _userManager.GetUserId(User);//Keeps erroring
@@ -88,10 +89,12 @@ namespace BlindDatingjk.Controllers
             if (profile == null)
             {
                 return RedirectToAction("Create");
+
             }
 
 
             return View(profile);
+
         }
 
 
@@ -99,6 +102,7 @@ namespace BlindDatingjk.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Age,Gender,Bio,UserAccountId")] DatingProfile datingProfile)
         {
@@ -112,7 +116,7 @@ namespace BlindDatingjk.Controllers
         }
 
         // GET: DatingProfiles/Edit/5
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -182,7 +186,7 @@ namespace BlindDatingjk.Controllers
         }
 
         // POST: DatingProfiles/Delete/5
-        //[Authorize(Roles = "Administrator")]
+        [Authorize(Roles = "Administrator")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
