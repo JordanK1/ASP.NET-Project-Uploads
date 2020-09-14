@@ -33,7 +33,7 @@ namespace BlindDatingjk.Models
             {
                 entity.Property(e => e.Id)
                     .HasColumnName("ID")
-                    .ValueGeneratedNever();
+                    .ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Age).HasColumnName("age");
 
